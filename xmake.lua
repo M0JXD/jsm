@@ -1,3 +1,4 @@
+add_rules("mode.debug", "mode.release")
 --add_requires('ntk', {system = true})
 --add_requires('ntk_images', {system = true})
 
