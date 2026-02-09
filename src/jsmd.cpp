@@ -2,21 +2,22 @@
 /*******************************************************************************/
 /* Copyright (C) 2008-2020 Jonathan Moore Liles (as "Non-Session-Manager")     */
 /* Copyright (C) 2020- Nils Hilbricht                                          */
+/* Copyright (C) 2026 Jamie Drinkell                                           */
 /*                                                                             */
-/* This file is part of New-Session-Manager                                    */
+/* This file is part of JSM                                    */
 /*                                                                             */
-/* New-Session-Manager is free software: you can redistribute it and/or modify */
+/* JSM is free software: you can redistribute it and/or modify */
 /* it under the terms of the GNU General Public License as published by        */
 /* the Free Software Foundation, either version 3 of the License, or           */
 /* (at your option) any later version.                                         */
 /*                                                                             */
-/* New-Session-Manager is distributed in the hope that it will be useful,      */
+/* JSM is distributed in the hope that it will be useful,      */
 /* but WITHOUT ANY WARRANTY; without even the implied warranty of              */
 /* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the               */
 /* GNU General Public License for more details.                                */
 /*                                                                             */
 /* You should have received a copy of the GNU General Public License           */
-/* along with New-Session-Manager. If not, see <https://www.gnu.org/licenses/>.*/
+/* along with JSM. If not, see <https://www.gnu.org/licenses/>.*/
 /*******************************************************************************/
 
 #define __MODULE__ "jsmd"
@@ -47,8 +48,6 @@
 #include <fts.h>
 
 #include "Endpoint.H"
-/* for locking */
-#include "file.h"
 
 #include <map>
 #include <string>
