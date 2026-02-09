@@ -12,9 +12,8 @@ The *extras* directory containing the NSM client header and Python implementatio
 
 ## TODO
 
-- Check if the XDG changes to file.cpp/.h need implemented in nonlib-xt
-- Get code building on Linux now I've massively changed up the repo and used Stazed's submodules
-- As part of above process, implement Xmake build
+- Revert changes to use XDG directory, as JSM and it's daemon are intended as an end user implementation with accessible home folder.
+- Get UI version building
 - Add NTK build
 - Redo docs
 - Start FreeBSD port changing signalfd for kqueue
