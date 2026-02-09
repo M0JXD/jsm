@@ -2,13 +2,23 @@
 
 JSM is a fork of New Session Manager (NSM), which is in turn a fork of Non Session Manager (also NSM). The main goals are to:
 
-- Integrate with the existing Non* ecosystem again, using nonlib and non-FL.
+- Integrate with the existing Non* ecosystem again, using [nonlib-xt](https://github.com/Stazed/nonlib-xt) and [non-FL](https://github.com/Stazed/non-FL).
 - Restore NTK as a GUI option.
 - Bring more options to the FLTK version in alignment with the other Non forks.
 - Bring support to new platforms, starting with FreeBSD.
 
 I have split away forks the bundled tools (jackpatch and NSM Proxy) into a new repo, nsm-tools.
-The *extras* directory containing the NSM client header and Python implementation have been removed, as the intention here is to make a portable, light server that is compliant with NewSM, and not to make client protocol changes. Such to say, JSM does not replace NSM, and those files should be obtained from the official New Session Manager repository.
+The *extras* directory containing the NSM client header and Python implementation have been removed, as the intention here is to make a portable version of NSM that's more integrated with the active Non forks, and not to make client protocol changes. Such to say, JSM does not replace NSM, and those files should be obtained from the official New Session Manager repository.
+
+## TODO
+
+- Check if the XDG changes to file.cpp/.h need implemented in nonlib-xt
+- Get code building on Linux now I've massively changed up the repo and used Stazed's submodules
+- As part of above process, implement Xmake build
+- Add NTK build
+- Redo docs
+- Start FreeBSD port changing signalfd for kqueue
+- Nice to have: I see no reason why JSM should not have a TUI interface too.
 
 ## Build
 
