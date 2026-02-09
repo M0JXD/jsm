@@ -19,7 +19,7 @@
 /* along with New-Session-Manager. If not, see <https://www.gnu.org/licenses/>.*/
 /*******************************************************************************/
 
-#define __MODULE__ "nsmd"
+#define __MODULE__ "jsmd"
 
 //debug.c has only one function that gets used multiple times by debug.h and for logging and printing
 #include "debug.h"
@@ -48,7 +48,7 @@
 
 #include "Endpoint.H"
 /* for locking */
-#include "./file.h"
+#include "file.h"
 
 #include <map>
 #include <string>
@@ -289,6 +289,19 @@ static std::list< Client* > client;
 
 static char *session_path = NULL;
 static char *session_name = NULL;
+
+char *
+simple_hash( const char *s )
+{   //djb2
+    unsigned long hashAddress = 5381;
+    for ( int counter = 0;  s[counter]!='\0'; counter++ ) {
+        hashAddress = ( (hashAddress << 5) + hashAddress ) + s[counter];
+    }
+
+    char *result = NULL;
+    asprintf( &result, "%lu", hashAddress % 65521 );
+    return result;
+}
 
 bool
 clients_have_errors ( )
