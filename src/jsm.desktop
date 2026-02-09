@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=JSM
+Comment=Audio session manager
+Exec=jsm
+Icon=jsm
+Terminal=false
+StartupNotify=false
+Version=1.0
+Categories=AudioVideo;Audio;
