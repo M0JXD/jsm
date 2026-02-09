@@ -46,9 +46,9 @@
 #include <sys/time.h>
 #include <fts.h>
 
-#include "Endpoint.hpp"
+#include "Endpoint.H"
 /* for locking */
-#include "file.h"
+#include "./file.h"
 
 #include <map>
 #include <string>
@@ -85,7 +85,9 @@ static char *daemon_file;
 #define ERR_SESSION_LOCKED   -11
 #define ERR_OPERATION_PENDING -12
 
-#define APP_TITLE "New Session Manager"
+#define APP_TITLE "JXD Session Manager"
+
+std::string project_directory;
 
 enum {
     COMMAND_NONE = 0,
@@ -2701,7 +2703,7 @@ int main(int argc, char *argv[])
                 exit(0);
                 break;
             case 'q':
-                quietMessages = true; //from debug.h
+                //quietMessages = true; //from debug.h
                 break;
             case 'h':
                 //Print usage message according to POSIX.1-2017
