@@ -7,7 +7,7 @@ JSM is a fork of New Session Manager (NSM), which is in turn a fork of Non Sessi
 - Bring more options to the FLTK version in alignment with the other Non forks.
 - Bring support to new platforms, starting with FreeBSD.
 
-I have split away forks the bundled tools (jackpatch and NSM Proxy) into a new repo, nsm-tools.
+I have split away forks the bundled tools (jackpatch and NSM Proxy) into a new repo, [nsm-tools](https://github.com/M0JXD/nsm-tools).
 The *extras* directory containing the NSM client header and Python implementation have been removed, as the intention here is to make a portable version of NSM that's more integrated with the active Non forks, and not to make client protocol changes. Such to say, JSM does not replace NSM, and those files should be obtained from the official New Session Manager repository.
 
 ## TODO
