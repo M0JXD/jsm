@@ -21,7 +21,7 @@
 
 
 
-#include "Endpoint.hpp"
+#include "Endpoint.H"
 
 
 #include <FL/Fl.H>
@@ -44,8 +44,8 @@
 #include <FL/Fl_Shared_Image.H>
 #include <FL/Fl_Box.H>
 #include <FL/Fl_Text_Display.H>
-#include "FL/Fl_Packscroller.H"
-#include "FL/Fl_Scalepack.H"
+#include "Fl_Packscroller.H"
+#include "Fl_Scalepack.H"
 
 #include <unistd.h>
 #include <errno.h>
@@ -61,6 +61,8 @@
 static time_t last_ping_response;
 
 static OSC::Endpoint *osc;
+
+std::string project_directory;
 
 struct Daemon
 {
@@ -1418,7 +1420,7 @@ main (int argc, char **argv )
 
             args[i] = 0;
 
-            if ( -1 == execvp( "nsmd", args ) )
+            if ( -1 == execvp( "jsmd", args ) )
             {
                 FATAL( "Error starting process: %s", strerror( errno ) );
             }
