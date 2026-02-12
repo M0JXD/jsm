@@ -62,7 +62,6 @@ static time_t last_ping_response;
 
 static OSC::Endpoint *osc;
 
-std::string project_directory;
 
 struct Daemon
 {

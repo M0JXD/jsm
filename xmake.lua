@@ -7,7 +7,7 @@ target('jsm')
 	add_files('src/jsm_ui.cpp')
 	add_includedirs('FL', 'nonlib', 'nonlib/OSC')
 	add_files('FL/Fl_Scalepack.C')
-	add_files('nonlib/*.C', 'nonlib/OSC/*.C')
+	add_files('nonlib/Thread.C', 'nonlib/debug.C', 'nonlib/OSC/Endpoint.C')
 	add_syslinks('pthread', 'lo', 'X11', 'cairo')
 	add_options('NativeOptimizations', 'NtkBuild')
 	if has_config("NtkBuild") then
