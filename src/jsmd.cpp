@@ -37,7 +37,11 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <signal.h>
+#ifdef __linux__
 #include <sys/signalfd.h>
+#else
+#include <sys/event.h>
+#endif
 #include <sys/stat.h>
 #include <sys/wait.h>
 #include <time.h>
@@ -85,8 +89,6 @@ static char *daemon_file;
 #define ERR_OPERATION_PENDING -12
 
 #define APP_TITLE "JXD Session Manager"
-
-std::string project_directory;
 
 enum {
     COMMAND_NONE = 0,
