@@ -94,7 +94,7 @@ This is a software package that will compile and install multiple executables:
 * `nsm-legacy-gui`, Legacy GUI for the user
   * Formerly known as "non-session-manager"
   * Dependencies are `FLTK`>=v1.3.0 and `liblo`, the OSC library.
-  * Can be deactivated (see below) `-Dlegacy-gui=false`
+  * Can be deactivated (see below) `-Dnsm-legacy-gui=false`
 * `nsm-proxy`, NSM GUI Client to run any program without direct NSM support
   * Dependencies are `FLTK`>=v1.3.0, `fluid` (FLTK Editor/compiler, maybe in the same package as FLTK, maybe not) and `liblo`, the OSC library.
   * Can be deactivated (see below) `-Dnsm-proxy=false`
@@ -103,7 +103,7 @@ This is a software package that will compile and install multiple executables:
 ```
 meson build --prefix=/usr
 #or disable individual build targets:
-#meson build --prefix=/usr -Dlegacy-gui=false -Dnsm-proxy=false -Djackpatch=false
+#meson build --prefix=/usr -Dnsm-legacy-gui=false -Dnsm-proxy=false -Djackpatch=false
 cd build && ninja
 sudo ninja install
 ```
